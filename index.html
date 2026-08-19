@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPS Hosting | PKHosting</title>
+<meta name="description" content="VPS hosting plans for Pakistan. NVMe storage, full root access, and local support. Monthly or annual billing in PKR, USD or GBP.">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#main">
+      <span class="brand__mark" aria-hidden="true">PK</span>
+      <span class="brand__name">PKHosting</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#compare">Compare</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow">VPS Hosting</p>
+      <h1 class="hero__title">Pakistan-hosted VPS, priced in the currency you actually pay in.</h1>
+      <p class="hero__lede">
+        NVMe storage, full root access, and a Karachi edge network. Every plan is billed
+        in PKR, with US dollar and pound sterling shown at a fixed rate so
+        you always know the number on the invoice.
+      </p>
+      <p class="hero__actions">
+        <a class="btn btn--primary" href="#plans">See VPS plans</a>
+        <a class="btn btn--ghost" href="#compare">Compare specifications</a>
+      </p>
+      <ul class="hero__points">
+        <li>Deployed in under 60 seconds</li>
+        <li>99.9% uptime commitment</li>
+        <li>Support in Urdu and English</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" class="plans" aria-labelledby="plans-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="plans-heading">Choose your VPS plan</h2>
+        <p class="section-head__lede">Four sizes, one network. Scale up at any time without rebuilding.</p>
+      </div>
+
+      <!-- Hidden without JS, so we never show a control that cannot do anything. -->
+      <div class="controls js-only">
+        <fieldset class="billing">
+          <legend class="billing__legend">Billing period</legend>
+          <div class="billing__options">
+            <input type="radio" id="billing-monthly" name="billing" value="monthly" checked>
+            <label for="billing-monthly">Monthly</label>
+            <input type="radio" id="billing-annual" name="billing" value="annual">
+            <label for="billing-annual">Annually <span class="billing__hint">2 months free</span></label>
+          </div>
+        </fieldset>
+
+        <div class="currency">
+          <label for="currency-select">Currency</label>
+          <select id="currency-select" name="currency">
+            <option value="PKR" selected>PKR - Pakistani rupee</option>
+            <option value="USD">USD - US dollar</option>
+            <option value="GBP">GBP - pound sterling</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Monthly PKR is the source of truth. data-plan keys the rewrite; text and key must not drift. -->
+      <ul class="cards" role="list">
+
+        <li class="card">
+          <h3 class="card__name" id="plan-starter">Starter</h3>
+          <p class="card__pitch">A first production box for a single site or staging environment.</p>
+          <p class="card__price">
+            <span class="price" data-plan="starter">
+              <span class="price__symbol">Rs</span><span class="price__amount">2,400</span>
+            </span>
+            <span class="price__period">per month</span>
+          </p>
+          <p class="card__annual" data-annual-line hidden>
+            <span class="card__annual-total"></span>
+            <span class="card__annual-save"></span>
+          </p>
+          <p class="card__cta">
+            <a class="btn btn--ghost btn--block" href="#compare" aria-describedby="plan-starter">Choose Starter</a>
+          </p>
+          <ul class="card__specs" role="list">
+            <li>2 vCPU cores</li>
+            <li>4 GB RAM</li>
+            <li>80 GB NVMe storage</li>
+            <li>2 TB monthly transfer</li>
+            <li>1 dedicated IPv4 address</li>
+          </ul>
+        </li>
+
+        <li class="card card--featured">
+          <p class="card__flag">Most popular</p>
+          <h3 class="card__name" id="plan-growth">Growth</h3>
+          <p class="card__pitch">The size most Pakistani agencies land on for client workloads.</p>
+          <p class="card__price">
+            <span class="price" data-plan="growth">
+              <span class="price__symbol">Rs</span><span class="price__amount">4,800</span>
+            </span>
+            <span class="price__period">per month</span>
+          </p>
+          <p class="card__annual" data-annual-line hidden>
+            <span class="card__annual-total"></span>
+            <span class="card__annual-save"></span>
+          </p>
+          <p class="card__cta">
+            <a class="btn btn--primary btn--block" href="#compare" aria-describedby="plan-growth">Choose Growth</a>
+          </p>
+          <ul class="card__specs" role="list">
+            <li>4 vCPU cores</li>
+            <li>8 GB RAM</li>
+            <li>160 GB NVMe storage</li>
+            <li>4 TB monthly transfer</li>
+            <li>Daily backups, 7-day retention</li>
+          </ul>
+        </li>
+
+        <li class="card">
+          <h3 class="card__name" id="plan-scale">Scale</h3>
+          <p class="card__pitch">For traffic peaks, busy databases and multi-service deployments.</p>
+          <p class="card__price">
+            <span class="price" data-plan="scale">
+              <span class="price__symbol">Rs</span><span class="price__amount">9,600</span>
+            </span>
+            <span class="price__period">per month</span>
+          </p>
+          <p class="card__annual" data-annual-line hidden>
+            <span class="card__annual-total"></span>
+            <span class="card__annual-save"></span>
+          </p>
+          <p class="card__cta">
+            <a class="btn btn--ghost btn--block" href="#compare" aria-describedby="plan-scale">Choose Scale</a>
+          </p>
+          <ul class="card__specs" role="list">
+            <li>8 vCPU cores</li>
+            <li>16 GB RAM</li>
+            <li>320 GB NVMe storage</li>
+            <li>8 TB monthly transfer</li>
+            <li>Advanced DDoS protection</li>
+          </ul>
+        </li>
+
+        <li class="card">
+          <h3 class="card__name" id="plan-dedicated">Dedicated Core</h3>
+          <p class="card__pitch">Reserved physical cores with no neighbours competing for CPU time.</p>
+          <p class="card__price">
+            <span class="price" data-plan="dedicated">
+              <span class="price__symbol">Rs</span><span class="price__amount">19,500</span>
+            </span>
+            <span class="price__period">per month</span>
+          </p>
+          <p class="card__annual" data-annual-line hidden>
+            <span class="card__annual-total"></span>
+            <span class="card__annual-save"></span>
+          </p>
+          <p class="card__cta">
+            <a class="btn btn--ghost btn--block" href="#compare" aria-describedby="plan-dedicated">Choose Dedicated Core</a>
+          </p>
+          <ul class="card__specs" role="list">
+            <li>16 dedicated cores</li>
+            <li>32 GB RAM</li>
+            <li>640 GB NVMe storage</li>
+            <li>16 TB monthly transfer</li>
+            <li>30-minute support response</li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <p class="plans__note">
+        Prices exclude applicable taxes. Currency conversions use a fixed internal rate
+        of 1 USD = Rs 278.50 and 1 GBP = Rs 355.00; your invoice is issued in PKR.
+      </p>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section id="compare" class="compare" aria-labelledby="compare-heading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="compare-heading">Compare all four plans</h2>
+        <p class="section-head__lede">Every specification, side by side.</p>
+      </div>
+
+      <!-- tabindex makes the overflow scrollable by keyboard; role+label name it on focus. -->
+      <div class="table-scroll" tabindex="0" role="region" aria-labelledby="compare-heading">
+        <table class="spec-table">
+          <caption class="visually-hidden">
+            VPS plan specifications compared across Starter, Growth, Scale and Dedicated Core.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" class="spec-table__rowhead">Specification</th>
+              <th scope="col">
+                <span class="spec-table__plan">Starter</span>
+                <span class="price" data-plan="starter">
+                  <span class="price__symbol">Rs</span><span class="price__amount">2,400</span>
+                </span>
+                <span class="spec-table__period">per month</span>
+              </th>
+              <th scope="col" class="spec-table__col--featured">
+                <span class="spec-table__plan">Growth</span>
+                <span class="price" data-plan="growth">
+                  <span class="price__symbol">Rs</span><span class="price__amount">4,800</span>
+                </span>
+                <span class="spec-table__period">per month</span>
+              </th>
+              <th scope="col">
+                <span class="spec-table__plan">Scale</span>
+                <span class="price" data-plan="scale">
+                  <span class="price__symbol">Rs</span><span class="price__amount">9,600</span>
+                </span>
+                <span class="spec-table__period">per month</span>
+              </th>
+              <th scope="col">
+                <span class="spec-table__plan">Dedicated Core</span>
+                <span class="price" data-plan="dedicated">
+                  <span class="price__symbol">Rs</span><span class="price__amount">19,500</span>
+                </span>
+                <span class="spec-table__period">per month</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">vCPU cores</th>
+              <td>2 shared</td>
+              <td>4 shared</td>
+              <td>8 shared</td>
+              <td>16 dedicated</td>
+            </tr>
+            <tr>
+              <th scope="row">Memory</th>
+              <td>4 GB</td>
+              <td>8 GB</td>
+              <td>16 GB</td>
+              <td>32 GB</td>
+            </tr>
+            <tr>
+              <th scope="row">NVMe storage</th>
+              <td>80 GB</td>
+              <td>160 GB</td>
+              <td>320 GB</td>
+              <td>640 GB</td>
+            </tr>
+            <tr>
+              <th scope="row">Monthly transfer</th>
+              <td>2 TB</td>
+              <td>4 TB</td>
+              <td>8 TB</td>
+              <td>16 TB</td>
+            </tr>
+            <tr>
+              <th scope="row">Network port</th>
+              <td>500 Mbps</td>
+              <td>1 Gbps</td>
+              <td>1 Gbps</td>
+              <td>2 Gbps</td>
+            </tr>
+            <tr>
+              <th scope="row">Dedicated IPv4 addresses</th>
+              <td>1</td>
+              <td>1</td>
+              <td>2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <th scope="row">Automated backups</th>
+              <td>Weekly</td>
+              <td>Daily, 7-day retention</td>
+              <td>Daily, 14-day retention</td>
+              <td>Daily, 30-day retention</td>
+            </tr>
+            <tr>
+              <th scope="row">DDoS protection</th>
+              <td>Standard</td>
+              <td>Standard</td>
+              <td>Advanced</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <th scope="row">Control panel</th>
+              <td>Optional add-on</td>
+              <td>Optional add-on</td>
+              <td>Included</td>
+              <td>Included</td>
+            </tr>
+            <tr>
+              <th scope="row">Support response target</th>
+              <td>12 hours</td>
+              <td>6 hours</td>
+              <td>2 hours</td>
+              <td>30 minutes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq" aria-labelledby="faq-heading">
+    <div class="wrap wrap--narrow">
+      <div class="section-head">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+      </div>
+
+      <details class="faq__item">
+        <summary>How does annual billing work?</summary>
+        <div class="faq__body">
+          <p>
+            Annual plans are charged for ten months instead of twelve, so two months are
+            free. The full year is invoiced once, up front, and the per-month figure shown
+            on annual cards is that yearly total divided by twelve.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Which currency will I actually be charged in?</summary>
+        <div class="faq__body">
+          <p>
+            Every invoice is issued in Pakistani rupees. US dollar and pound sterling
+            figures are shown for reference at a fixed internal rate and are not a
+            live market quote, so what you see here is what appears on the invoice.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Can I move between plans later?</summary>
+        <div class="faq__body">
+          <p>
+            Yes. Upgrades apply immediately with the remaining balance credited against
+            the new plan. Downgrades take effect at the start of your next billing period
+            so you keep the resources you have already paid for.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Do I get full root access?</summary>
+        <div class="faq__body">
+          <p>
+            All four plans include full root access over SSH, your own kernel, and a
+            console you can reach even if the network configuration is broken. A control
+            panel is available if you would rather not work at the command line.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>Where are the servers located?</summary>
+        <div class="faq__body">
+          <p>
+            The VPS fleet is hosted in Karachi with an onward peering route through Dubai.
+            For visitors inside Pakistan this keeps round-trip latency well below what an
+            equivalent server in Europe or North America can offer.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>What happens if I cancel mid-term?</summary>
+        <div class="faq__body">
+          <p>
+            Monthly plans can be cancelled before the next renewal date with no fee.
+            Annual plans are refundable on a pro-rata basis for the unused whole months,
+            less the two months that were given free at the start of the term.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Summarises the change; re-reading all eight prices on every toggle is unusable. -->
+  <p id="price-announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+
+    <section class="payments" aria-labelledby="payments-heading">
+      <h2 id="payments-heading" class="site-footer__heading">Ways to pay</h2>
+      <ul class="payments__list" role="list">
+        <li class="payment">Bank transfer</li>
+        <li class="payment">JazzCash</li>
+        <li class="payment">Easypaisa</li>
+        <li class="payment">Visa</li>
+        <li class="payment">Mastercard</li>
+      </ul>
+      <p class="payments__note">
+        Every invoice is settled in Pakistani rupees. Card payments clear immediately;
+        bank transfer and wallet payments are matched to your invoice within one working day.
+      </p>
+    </section>
+
+    <section class="site-footer__about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="site-footer__heading">PKHosting</h2>
+      <p>
+        Karachi-based hosting for Pakistani businesses. This VPS line and its prices are
+        a fictional exercise and are not for sale.
+      </p>
+    </section>
+
+  </div>
+  <p class="site-footer__legal">
+    <small>Demonstration page built for a hiring assessment. Not affiliated with any live PKHosting product.</small>
+  </p>
+</footer>
+
+</body>
+</html>
