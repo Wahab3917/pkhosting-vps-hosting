@@ -279,7 +279,7 @@ img, svg { max-width: 100%; }
   gap: var(--sp-2);
   color: var(--text-on-inverse);
   font-weight: 800;
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   letter-spacing: -0.02em;
   text-decoration: none;
 }
@@ -287,8 +287,8 @@ img, svg { max-width: 100%; }
 .brand__mark {
   display: grid;
   place-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: var(--radius);
   background: var(--brand-500);
   color: var(--ink-950);
@@ -299,17 +299,34 @@ img, svg { max-width: 100%; }
 .site-nav__list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-2);
+  gap: var(--sp-1);
 }
 
 .site-nav__list a {
   display: inline-block;
-  padding: var(--sp-2) var(--sp-3);
+  padding: var(--sp-2);
   border-radius: var(--radius);
   color: var(--ink-200);
-  font-size: var(--step--1);
+  font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
+}
+
+/* Room to breathe once the header is no longer close to wrapping. */
+@media (min-width: 40em) {
+  .brand { font-size: var(--step-1); }
+
+  .brand__mark {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .site-nav__list { gap: var(--sp-2); }
+
+  .site-nav__list a {
+    padding: var(--sp-2) var(--sp-3);
+    font-size: var(--step--1);
+  }
 }
 
 .site-nav__list a:hover {
@@ -424,7 +441,23 @@ img, svg { max-width: 100%; }
 .plans,
 .compare,
 .faq {
-  padding-block: var(--sp-8);
+  padding-block: var(--sp-7);
+}
+
+@media (min-width: 48em) {
+  .plans,
+  .compare,
+  .faq {
+    padding-block: var(--sp-8);
+  }
+}
+
+/*
+  These two sit on the same white ground with no divider between them, so the
+  gap should be one section's worth of padding, not two.
+*/
+.compare + .faq {
+  padding-block-start: 0;
 }
 
 .plans {
@@ -540,7 +573,15 @@ img, svg { max-width: 100%; }
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
-  text-align: left;
+  text-align: center;
+}
+
+/* Stacked, the label reads as part of the centred column; alongside the
+   billing pill it lines up with its own select instead. */
+@media (min-width: 40em) {
+  .currency {
+    text-align: left;
+  }
 }
 
 .currency select {
@@ -567,7 +608,7 @@ img, svg { max-width: 100%; }
 
 .cards {
   display: grid;
-  gap: var(--sp-4);
+  gap: var(--sp-6) var(--sp-4);
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   align-items: start;
 }
