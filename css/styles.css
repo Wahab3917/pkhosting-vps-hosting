@@ -610,7 +610,6 @@ img, svg { max-width: 100%; }
   display: grid;
   gap: var(--sp-6) var(--sp-4);
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  align-items: start;
 }
 
 .card {
@@ -627,7 +626,6 @@ img, svg { max-width: 100%; }
 
 .card--featured {
   position: relative;
-  padding-top: var(--sp-6);
   border-color: transparent;
   background: var(--surface-inverse);
   color: var(--text-body-inverse);
@@ -656,6 +654,7 @@ img, svg { max-width: 100%; }
 }
 
 .card__pitch {
+  min-height: 3.3em;   /* two lines, so the price below never sits lower */
   margin-top: var(--sp-2);
   font-size: var(--step--1);
   color: var(--text-muted);
